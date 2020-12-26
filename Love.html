@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+}
+
+main{
+  width: 100%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+body{
+  background-image: url('https://wp.en.aleteia.org/wp-content/uploads/sites/2/2017/11/web3-the-power-of-i-love-you-morokey-via-shutterstock.jpg?quality=100&strip=all');
+  
+  width: 100%;
+}
+
+.card{
+  opacity: 0.8;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+  <main>
+<div class="container w-50">
+  <div class="card">
+    <h5 class="card-header text-center text-white bg-danger ">LOVE CALCULATOR</h5>
+    <div class="card-body">
+      <h5 class="card-title text-center text-danger">KEEP LOVING AND SMILING</h5>
+      <p class="card-text">
+            <p class="info">
+            
+              <input type="text" placeholder="Your Name" class="form-control m-auto text-center" id="yname"> +
+            
+              <input type="text" placeholder="Lover Name" class="form-control m-auto text-center" id="lname">
+            </p>
+         <div class="button">
+      <button class="btn btn-outline-success w-25" onclick="myfun()">Check</button>
+         </div>
+          <div>
+        <p class="info">
+          <input type="text"  placeholder="Love Percentage" class="form-control  w-50 text-center mt-3" id="per">
+        </p> 
+      </div>
+    </div>
+
+    <div class="card-footer text-center bg-danger text-white">
+      <h5>God bless your relationship</h5>
+    </div>
+
+  </div>
+</div>
+
+</main>
+
+
+<script>
+
+function myfun(){
+
+var yourName = document.getElementById("yname").value;
+
+var loverName = document.getElementById("lname").value;
+
+ 
+
+if(yourName== ""){
+alert("Enter your Name!");
+}else if( yourName.length < 3 ){
+  alert("Min name lenght is 3");
+}else if(!isNaN(yourName)){
+  alert("Numbers are not Allowed");
+}else if(loverName == ""){
+alert("Enter your Love Name!");
+}else if(loverName.length < 3){
+  alert("Min Lover name length is 3");
+}else if(!isNaN(loverName)){
+  alert("Numbers are not Allowed");
+}else{
+  document.getElementById("per").value = Math.floor(Math.random() * 100) +"%";
+}
+
+}
+
+
+</script>
+</body>
+</html>
